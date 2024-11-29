@@ -1,0 +1,72 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Categories (main sections) */
+section h2 {
+    cursor: pointer;
+    padding: 15px;
+    background: #4CAF50;
+    color: white;
+    margin: 0;
+    border-radius: 5px;
+    font-size: 26px; /* Slightly larger for categories */
+    transition: background 0.3s ease;
+}
+
+section h2:hover {
+    background: #45a049; /* Darker green on hover */
+}
+
+/* Hide content of sections by default */
+section .content {
+    display: none;
+}
+
+section.open .content {
+    display: block;
+}
+
+/* Main subcategories (first level inside <ul>) */
+ul > li {
+    font-weight: bold; /* Make main subs bold */
+    font-size: 18px; /* Slightly larger for visibility */
+    margin: 10px 0;
+}
+
+/* Deeper subcategories (nested <ul> items) */
+ul ul > li {
+    font-weight: normal; /* Normal font weight for deeper subs */
+    font-size: 16px; /* Slightly smaller font */
+    margin-left: 15px;
+    padding-left: 10px;
+}
+
+/* Data styling */
+ul ul li .data {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px; /* Same as subcategory font size */
+    color: #555; /* Slightly muted color */
+}
